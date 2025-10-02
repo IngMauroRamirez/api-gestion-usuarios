@@ -68,7 +68,7 @@ async function ObtenerUsuariosController(req, res){
             });
         }else{
             return res.status(200).json({
-                data:usuarios
+                data:informacion_usuarios
             });
         }
     } catch (error) {
@@ -77,7 +77,7 @@ async function ObtenerUsuariosController(req, res){
 
         // retornamos el error por defecto 500 (Internal server error)
         return res.status(500).json({ 
-            error: "No se pudo la info de los usuarios" 
+            error: "No se pudo obtener la info de los usuarios" 
         });
     }
 }

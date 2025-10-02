@@ -72,7 +72,7 @@ async function borrarUsuario (id) {
             'DELETE FROM usuarios WHERE id = ?', [id]
         );
         
-        return result.affectedRows > 0;
+        return eliminado.affectedRows > 0;
 
     } catch (error) {
         console.error("No se pudo eliminar la información del usuario: ", error.message);
@@ -83,5 +83,6 @@ async function borrarUsuario (id) {
 export {crearUsuario, 
     obtenerUsuarios, 
     usuarioEspecifico, 
-    actualizarUsuario
+    actualizarUsuario,
+    borrarUsuario
 };

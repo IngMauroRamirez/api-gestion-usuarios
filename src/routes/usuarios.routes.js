@@ -9,3 +9,6 @@ import usuariosController from '../controllers/usuarios.controller'
 
 router.post('/crearUsuario', usuariosController.crearUsuarioController);
 router.get('/todosUsuarios', usuariosController.ObtenerUsuariosController);
+router.get('/usuario_especifico/:id', usuariosController.usuarioEspecificoController);
+router.get('/usuario_especifico/:id', usuariosController.usuarioEspecificoController);
+router.delete('/eliminar_usuario/:id', usuariosController.eliminarUsuarioController);

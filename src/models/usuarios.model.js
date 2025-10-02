@@ -80,4 +80,8 @@ async function borrarUsuario (id) {
     }
 }
 
-export {crearUsuario, obtenerUsuarios, usuarioEspecifico, actualizarUsuario};
+export {crearUsuario, 
+    obtenerUsuarios, 
+    usuarioEspecifico, 
+    actualizarUsuario
+};

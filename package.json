@@ -1,0 +1,30 @@
+{
+  "name": "api-gestion-usuarios",
+  "version": "1.0.0",
+  "description": "API RESTful para gestion de usuarios",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IngMauroRamirez/api-gestion-usuarios.git"
+  },
+  "keywords": [
+    "node",
+    "api"
+  ],
+  "author": "Mauro Estefan Ramírez Aranguren",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IngMauroRamirez/api-gestion-usuarios/issues"
+  },
+  "homepage": "https://github.com/IngMauroRamirez/api-gestion-usuarios#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

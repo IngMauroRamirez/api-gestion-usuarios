@@ -1,13 +1,11 @@
-/*  Configuramos express y llamamos 
-    a usuarios.routes para importar las rutas 
-    del controlador. 
-*/
+/*  Importamos express */
 import express from 'express';
-import dotenv from 'dotenv';
+/* Incializamos la conexión a la base de datos */
 import './config/db.js'; 
+
+/* Importamos las rutas */
 import usuariosRutas from './routes/usuarios.routes.js';
 
-dotenv.config();
 
 const app = express();
 app.use(express.json());

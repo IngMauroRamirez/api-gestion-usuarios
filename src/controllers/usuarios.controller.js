@@ -122,15 +122,6 @@ async function actualizarUsuarioController(req, res) {
     // extraemos los campos que llegan por req
     const { nombre, correo, edad, ciudad } = req.body;
 
-    // validamos que almenos el usuario haya enviado el nombre y el correo
-    // ya que son dos datos requeridos por la bd y en caso de que no mandamos
-    // un status 400 (bad request)
-    if (!nombre || !correo) {
-        return res.status(400).json({
-            error: 'nombre y el correo son campos obligatorios.'
-        });
-    }
-
     // llamamos al modelo para actualizar la info del usuario.
     const actualizado = await actualizarUsuario(id, { nombre, correo, edad, ciudad });
 

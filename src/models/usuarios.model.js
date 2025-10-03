@@ -50,12 +50,38 @@ async function usuarioEspecifico (id){
 }
 
 // Función para actualizar la información de un usuario en específico
-async function actualizarUsuario (id, {nombre, correo, edad, ciudad}){
+async function actualizarUsuario (id, datos){
     try {
-        const [actualizado] = await pool.query(
-            'UPDATE usuarios SET nombre = ?, correo = ?, edad = ?, ciudad = ? WHERE id = ?',
-            [nombre, correo, edad, ciudad, id]
-        );
+        
+        // Construimos los datos que solamente se van a actualizar:
+        const campos = [];
+        const valores = [];
+
+        if (datos.nombre !== undefined) {
+            campos.push('nombre = ?');
+            valores.push(datos.nombre);
+        }
+
+        if (datos.correo !== undefined) {
+            campos.push('correo = ?');
+            valores.push(datos.correo);
+        }
+
+        if (datos.edad !== undefined) {
+            campos.push('edad = ?');
+            valores.push(datos.edad);
+        }
+
+        if (datos.ciudad !== undefined) {
+            campos.push('ciudad = ?');
+            valores.push(datos.ciudad);
+        }
+
+        // Construimos la query final
+        const query_actualizar = `UPDATE usuarios SET ${campos.join(', ')} WHERE id = ?`;
+        valores.push(id);
+
+        const [actualizado] = await pool.query(query_actualizar, valores);
         
         return actualizado.affectedRows > 0;
 

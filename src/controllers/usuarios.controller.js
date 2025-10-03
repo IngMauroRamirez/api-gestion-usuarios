@@ -178,7 +178,7 @@ async function eliminarUsuarioController(req, res){
 
     } catch (error) {
         // generamos un mensaje por consola.
-        console.error("Error en borrarUsuarioController:", error.message);
+        console.error("Error en borrar al usuario:", error.message);
 
         // retornamos el error por defecto 500 (Internal server error)
         return res.status(500).json({ 

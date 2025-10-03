@@ -35,7 +35,7 @@ Usé POSTMAN para las pruebas: Base URL: http://localhost:3000/api/usuarios
   }
 - GET / -> Obtener todos los usuarios de la base de datos.
 - GET /:id -> Obtener la información de un usuario en específico por su id.
-- PUT /:id -> Actualizar la información del usuario
+- PUT /:id -> Actualizar la información del usuario (Aquí es importante tener en cuenta que se puede colocar alguno de los siguientes datos en el JSON)
   Body (formato JSON):
   {
     "nombre": "colocar aqui nombre",

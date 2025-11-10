@@ -47,3 +47,6 @@ Usé POSTMAN para las pruebas: Base URL: http://localhost:3000/api/usuarios
 
 ## Autor
 Mauro Estefan Ramírez Aranguren.
+
+## Para uso personal
+https://open-vsx.org/api/zhuangtongfa/material-theme/3.19.0/file/zhuangtongfa.material-theme-3.19.0.vsix
